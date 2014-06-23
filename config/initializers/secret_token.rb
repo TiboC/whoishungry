@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Areyouhungry::Application.config.secret_key_base = 'd7303ecd7542d91eab81f9153105a3286d4019d8ebe277e121fbab6d1c4149f7f7e450bb1c809a50edbc682d636b707aa4c74395b344f5329c327b56acb59e6a'
+Whoishungry::Application.config.secret_key_base = 'd7303ecd7542d91eab81f9153105a3286d4019d8ebe277e121fbab6d1c4149f7f7e450bb1c809a50edbc682d636b707aa4c74395b344f5329c327b56acb59e6a'

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Areyouhungry::Application.load_tasks
+Whoishungry::Application.load_tasks

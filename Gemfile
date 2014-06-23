@@ -71,3 +71,5 @@ gem 'figaro'
 
 #To preview email in browser in dev
 gem 'letter_opener', group: [:development, :test]
+
+gem 'rename'
