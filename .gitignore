@@ -40,3 +40,6 @@ logfile
 
 # utils
 utils/*.png
+
+# Ignore application configuration
+/config/application.yml
