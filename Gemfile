@@ -63,6 +63,8 @@ gem 'will-paginate-i18n'
 
 # Authentication
 gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
 
 #Figaro
 gem 'figaro'
