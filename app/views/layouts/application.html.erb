@@ -22,18 +22,11 @@
         <% end %>
 
         <%= yield %>
+      </div>
 
-      </div>
       <%= render 'layouts/footer' %>
+
     </div>
-    <% if Rails.env.development? %>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <hr>
-            <%= debug(params) %>
-        </div>
-      </div>
-    <% end %>
   </body>
 </html>
 
