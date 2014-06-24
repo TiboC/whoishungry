@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624080820) do
+ActiveRecord::Schema.define(version: 20140624084712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "promos", force: true do |t|
+    t.string   "codename"
+    t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -33,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140624080820) do
     t.string   "uid"
     t.string   "name"
     t.string   "room"
+    t.integer  "promo_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
