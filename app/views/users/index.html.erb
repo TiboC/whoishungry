@@ -3,11 +3,11 @@
 <div class="row center col-md-8 col-md-offset-2">
   <br>
   <br>
-  <div class="panel panel-default">
+  <div class="panel panel-default center">
     <table class="table table-condensed">
       <thead>
         <tr>
-          <td>Photo</td>
+          <td></td>
           <td><strong>Name</strong></td>
           <td><strong>Nationalité</strong></td>
           <td><strong>Promo</strong></td>
@@ -18,10 +18,10 @@
       <tbody data-link="row" class="rowlink" data-target=".user_link">
         <% @users.each do |user| %>
         <tr>
-         <td>TODO</td>
+         <td><%= image_tag user.avatar.url(:thumb), class: "img-circle" %></td>
          <td><%= user.name or user.email  %></td>
-         <td>TODO</td>
-         <td>TODO</td>
+         <td><%= flag(user.nationality) or '' %></td>
+         <td><%= user.promo.label or '' %></td>
          <td>TODO</td>
          <td><%= link_to user_path(user), class: "user_link" do %>
           <span class="glyphicon glyphicon-eye-open"></span>

@@ -6,4 +6,7 @@ module ApplicationHelper
         when :error, :alert then "danger"
     end
   end
+  def flag code
+    return raw("<img src='' class='flag flag-#{code}' alt=#{IsoCountryCodes.find(code).name}>")
+  end
 end

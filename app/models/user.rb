@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 
   belongs_to :promo
 
+  has_attached_file :avatar, :styles => { :normal => "300x300>", thumb: "20x20>"}, :default_url => "missing-:style.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
 def self.from_omniauth(auth)
   where(auth.slice(:provider, :uid)).first_or_create do |user|
     user.email = auth.info.email

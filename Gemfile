@@ -72,4 +72,7 @@ gem 'figaro'
 #To preview email in browser in dev
 gem 'letter_opener', group: [:development, :test]
 
-gem 'rename'
+#To select nationalities for users and meal
+gem 'iso_country_codes'
+
+gem 'paperclip'
