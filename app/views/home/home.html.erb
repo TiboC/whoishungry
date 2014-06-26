@@ -1,6 +1,66 @@
-<div class="main-header">
-	<h1>
-		Kikoo !
-	</h1>
-	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<div class="rev-slider-full">
+  <div class="rev-slider-banner-full  rev-slider-full">
+    <ul>
+
+
+      <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
+        <%= image_tag 'placeholders/slider1/bg1.jpg', alt: "rev-full1", "data-fullwidthcentering" =>"on" %>
+        <div class="tp-caption slider-text-title sft str"
+        data-x="20"
+        data-y="150"
+        data-speed="300"
+        data-easing="easeOutCubic">Responsive Design</div>
+
+
+        <div class="tp-caption slider-text-description sft str"  data-x="20" data-y="200" data-start="1000" data-easing="easeOutBack">
+          Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,<br /> 
+          lorem quis bibendum auctor, nisi elit consequat ipsum, nec <br />
+          sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
+        </div>
+        <div class="tp-caption slider-text-description sft str"  data-x="20" data-y="280" data-start="1500" data-easing="easeOutBack">
+          <a href="#" class="button btn-flat">More Info</a>
+        </div>                  
+
+      </li>
+
+    </ul>
+    <div class="tp-bannertimer tp-bottom"></div>
+  </div>
+</div>
+
+<div class="section-content section-color-gray">
+  <div class="container">
+    <h2 class="h2-section-title">How it works ?</h2>
+    <div class="space-sep20"></div>
+    <div class="row">
+
+      <%  enters =
+          [
+            ['icon-food', 'Fully Customizable', 'Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
+              ligula. Nunc commodo lacinia eros ac condimentum' ],
+            ['icon-users-outline', 'Kikoo', 'Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
+              ligula. Nunc commodo lacinia eros ac condimentum'],
+            ['fa fa-euro', 'Kikoo', 'Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
+              ligula. Nunc commodo lacinia eros ac condimentum']
+          ]
+          enters.each do |enter| %>
+      <div class="col-md-<%= "#{12/enters.length}" %> col-sm-<%= "#{12/enters.length}" %>">
+        <div class="content-box content-style2">
+          <h4 class="h4-body-title animated" data-animtype="animated-scale" data-animrepeat="0"
+          data-animdelay="0s">
+            <i class="<%= enter[0]%>"></i>
+            <%= enter[1]%>
+          </h4>
+          <div class="content-box-text animated" data-animtype="fadeInDown" data-animrepeat="0"
+          data-animdelay="0s">
+            <%= enter[2]%>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
+
+
+    </div>
+  </div>
 </div>

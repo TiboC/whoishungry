@@ -1,10 +1,57 @@
-<header>
-	<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <a class="navbar-brand" href=<%= root_path %>>Brand</a>
+<div class="top_wrapper">
+  <header id="header">
+    <div class="container">
+      <div class="row header">
+        <!-- Logo -->
+        <div class="col-xs-2 logo">
+          <a href=<%= root_path%>>
+            <%= image_tag "main_logo.png" %>
+          </a>
+        </div>
+        <!-- //Logo// -->
+
+
+        <!-- Navigation File -->
+        <div class="col-md-10">
+          <!-- Mobile Button Menu -->
+          <div class="mobile-menu-button">
+            <i class="fa fa-list-ul"></i>
+          </div>
+          <!-- //Mobile Button Menu// -->
+          <nav>
+            <ul class="navigation">
+              <li>
+                <a href=<%= root_path %>>
+                  <span class="label-nav">
+                    Home
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="label-nav">
+                    Qui a fait quoi ce soir ?
+                  </span>
+                  <span class="label-nav-sub" data-hover="Voir">
+                    Voir
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="label-nav">
+                    Proposer un repas
+                  </span>
+                  <span class="label-nav-sub" data-hover="Voir">
+                    Miam
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Nav -->
       </div>
-    </div><!-- /.container-fluid -->
-  </nav>
-</header>
+    </div>
+  </header>
+</div>
