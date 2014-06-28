@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:facebook]
 
   belongs_to :promo
+  has_many :meals_cooked, class_name: "Meal", foreign_key: :cooker_id
 
   has_attached_file :avatar, :styles => { :normal => "300x300>", thumb: "20x20>"}, :default_url => "missing-:style.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/

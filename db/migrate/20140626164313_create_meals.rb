@@ -4,8 +4,10 @@ class CreateMeals < ActiveRecord::Migration
 
       t.string :title
 
-      t.integer :cooker
-      
+      t.text :description
+
+      t.integer :cooker_id
+
       t.integer :person_min
       t.integer :person_max
       

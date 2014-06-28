@@ -1,0 +1,36 @@
+<div class="feature blog-masonry">
+  <% if meal.photo.file? %>
+  <div class="feature-image img-overlay">
+    <%= image_tag meal.photo.url(:normal) %>
+    <div class="item-img-overlay">
+      <%= link_to '',meal_path(meal), class: "portfolio-zoom fa fa-search" %>
+    </div>
+  </div>
+  <% end %>
+  <div class="feature-content">
+    <h3 class="h3-body-title blog-title">
+      <%= link_to meal.title,meal_path(meal) %>
+    </h3>
+    <p>
+      <%= meal.description.truncate(100) %>
+    </p>
+    <p class="testimonial-by-name">
+      <%= link_to meal.cooker.name, user_path(meal.cooker) %>
+    </p>
+  </div>
+  <div class="feature-details">
+    <i class="icon-calendar"></i>
+    <span><%= meal.date.strftime("%d/%m") %></span>
+    <span class="details-seperator"></span>
+    
+    <a class="tool-tip" data-original-title="<%= meal.available_slices_tooltip %>">
+      <i class="icon-users"></i><span><%= meal.available_slices %></span>
+    </a>
+
+    <span class="details-seperator"></span>
+    <a class="tool-tip" data-original-title="Le prix variera avec le nombre de participants">
+      <i class="fa fa-euro"></i><span><%= "#{meal.price_min}-#{meal.price_max}" %></span>
+    </a>
+
+  </div>
+</div>

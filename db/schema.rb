@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 20140626164313) do
 
   create_table "meals", force: true do |t|
     t.string   "title"
-    t.integer  "cooker"
+    t.text     "description"
+    t.integer  "cooker_id"
     t.integer  "person_min"
     t.integer  "person_max"
     t.integer  "price_min"
